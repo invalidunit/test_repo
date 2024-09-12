@@ -1,0 +1,7 @@
+Origin: zhaonan's Test Repo
+Label: zhaonan's Test Repo
+Description: I don't know what I'm doing
+Suite: stable
+Version: 1.0
+Architectures: iphoneos-arm iphoneos-arm64 iphoneos-arm64e
+Components: main
