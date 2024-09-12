@@ -29,7 +29,7 @@ jobs:
           dpkg-scanpackages -m ./debs /dev/null >./Packages
           bzip2 -v -k -9 Packages
           xz -v -k -9 --extreme Packages
-          zstd --utra -22 -k Packages -o Packages.zst
+          zstd --ultra -22 -k Packages -o Packages.zst
 
       - name: save change if local change
         if: success()
