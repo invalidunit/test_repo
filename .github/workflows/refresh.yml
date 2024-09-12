@@ -19,8 +19,8 @@ jobs:
       - name: install depend
         if: success()
         run: |
-          apt update #2>>/dev/null 1>>/dev/null
-          apt install dpkg-dev bzip2 xz-utils zstd -y
+          sudo apt update 2>>/dev/null 1>>/dev/null
+          sudo apt install dpkg-dev bzip2 xz-utils zstd -y
 
       - name: Refresh Packages
         if: success()
