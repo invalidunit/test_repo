@@ -1,0 +1,51 @@
+Package: com.nan.bark
+Version: 0.1.9
+Architecture: iphoneos-arm
+Maintainer: zhaonan
+Depends: coreutils, sed, shell-cmds, jq, jo, openssl, xxd, curl
+Filename: ./debs/iphoneos-arm/com.nan.bark_0.1.9_iphoneos-arm.deb
+Size: 3532
+MD5sum: 2fc56f52ed75895aa422519eb3d4b262
+SHA1: be5798c4291c47b3cdc45a8d0029087b9a6c21cd
+SHA256: 92b6d3bcdc25e5f0235d791bf4f66564576f2dd63bcbfe7cadd59449ec26fc86
+Section: Terminal_Support
+Description: 用于向 bark 服务器推送自定义消息的 cli 脚本
+Author: zhaonan <invalidunit@icloud.com>
+Icon: https://invalidunit.github.io/sileodepiction/com.nan.bark/image.png
+Name: bark
+Sileodepiction: https://invalidunit.github.io/sileodepiction/com.nan.bark/js.json
+
+Package: com.nan.bark
+Version: 0.1.9
+Architecture: iphoneos-arm64
+Maintainer: zhaonan
+Depends: coreutils, sed, shell-cmds, jq, jo, openssl, xxd, curl
+Filename: ./debs/iphoneos-arm64/com.nan.bark_0.1.9_iphoneos-arm64.deb
+Size: 3560
+MD5sum: 8afa7f54cdd41d75ceda2367b9c5bf37
+SHA1: 170773c08d979777c14d1582cd065a631064b2e9
+SHA256: aae8cdbd442639217cfa67fe2f285b0275b4fc8668660dce4e432d160a149852
+Section: Terminal_Support
+Description: 用于向 bark 服务器推送自定义消息的 cli 脚本
+Author: zhaonan <invalidunit@icloud.com>
+Icon: https://invalidunit.github.io/sileodepiction/com.nan.bark/image.png
+Name: bark
+Sileodepiction: https://invalidunit.github.io/sileodepiction/com.nan.bark/js.json
+
+Package: com.nan.bark
+Version: 0.1.9
+Architecture: iphoneos-arm64e
+Maintainer: zhaonan
+Depends: coreutils, sed, shell-cmds, jq, jo, openssl, xxd, curl
+Filename: ./debs/iphoneos-arm64e/com.nan.bark_0.1.9_iphoneos-arm64e.deb
+Size: 3536
+MD5sum: d04ee003d9bf54421047f808b6bec229
+SHA1: c6ea369378673a662c5d32bec3bd120312b8eba9
+SHA256: 04045fe7c835bf3ba9ce2e667db75b8161c42a077474697582811c64835dc7fb
+Section: Terminal_Support
+Description: 用于向 bark 服务器推送自定义消息的 cli 脚本
+Author: zhaonan <invalidunit@icloud.com>
+Icon: https://invalidunit.github.io/sileodepiction/com.nan.bark/image.png
+Name: bark
+Sileodepiction: https://invalidunit.github.io/sileodepiction/com.nan.bark/js.json
+
