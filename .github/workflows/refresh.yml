@@ -25,7 +25,7 @@ jobs:
 			- name: Refresh Packages
 				if: success()
 				run: |
-					rm -rf ./Packages**
+					rm -rf ./Packages*
 					dpkg-scanpackages -m ./debs /dev/null >./Packages
 					bzip2 -v -k -9 Packages
 					xz -v -k -9 --extreme Packages
