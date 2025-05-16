@@ -8,19 +8,18 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: masos-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-
-      - name: install depend
-        if: success()
-        run: |
-          sudo apt update 2>>/dev/null 1>>/dev/null
-          sudo apt install dpkg-dev bzip2 xz-utils zstd -y
+          
+      - name: Install Procursus
+        uses: dhinakg/procursus-action@main
+        with:
+          packages: dpkg-dev bzip2 xz-utils zstd git
 
       - name: Refresh Packages
         if: success()
