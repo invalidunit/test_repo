@@ -19,7 +19,7 @@ jobs:
       - name: Install Procursus
         uses: dhinakg/procursus-action@main
         with:
-          packages: dpkg-dev bzip2 xz-utils zstd git tree
+          packages: coreutils dpkg-dev bzip2 xz-utils zstd git
 
       - name: Refresh Packages
         if: success()
