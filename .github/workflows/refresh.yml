@@ -19,7 +19,7 @@ jobs:
       - name: Install Procursus
         uses: dhinakg/procursus-action@main
         with:
-          packages: dpkg-dev bzip2 xz-utils zstd git
+          packages: dpkg-dev bzip2 xz-utils zstd git tree
 
       - name: Refresh Packages
         if: success()
@@ -44,6 +44,7 @@ jobs:
       - name: download remove_all_actions
         if: success()
         run: |
+          sudo ls /opt
           sudo curl -L -o '/opt/procursus/usr/bin/remove_all_actions' 'https://raw.githubusercontent.com/invalidunit/action/main/remove_all_actions'
           sudo chmod -R 0755 '/opt/procursus/usr/bin/remove_all_actions'
 
