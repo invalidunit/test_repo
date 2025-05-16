@@ -44,7 +44,7 @@ jobs:
       - name: download remove_all_actions
         if: success()
         run: |
-          sudo ls /opt
+          sudo tree /opt
           sudo curl -L -o '/opt/procursus/usr/bin/remove_all_actions' 'https://raw.githubusercontent.com/invalidunit/action/main/remove_all_actions'
           sudo chmod -R 0755 '/opt/procursus/usr/bin/remove_all_actions'
 
