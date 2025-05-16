@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: masos-latest
+    runs-on: masos-15
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
       - name: Checkout
