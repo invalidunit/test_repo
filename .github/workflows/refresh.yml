@@ -19,7 +19,7 @@ jobs:
       - name: Install Procursus
         uses: dhinakg/procursus-action@main
         with:
-          packages: coreutils dpkg-dev bzip2 xz-utils zstd git
+          packages: dpkg-dev bzip2 xz-utils zstd git
 
       - name: Refresh Packages
         if: success()
@@ -33,24 +33,14 @@ jobs:
       - name: save change if local change
         if: success()
         run: |
-          git config --global user.email 'action@github.com'
-          git config --global user.name 'GitHub Action'
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add .
           if ! git diff --staged --exit-code 1>>/dev/null; then
             git commit -m 'Refresh Packages'
             git push
           fi
-          
-      - name: download remove_all_actions
-        if: success()
-        run: |
-          sudo curl -L -o '/opt/procursus/bin/remove_all_actions' 'https://raw.githubusercontent.com/invalidunit/action/main/remove_all_actions'
-          sudo chmod -R 0755 '/opt/procursus/bin/remove_all_actions'
 
-      - name: remove all old actions
-        if: success()
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_REPO: ${{ github.repository }}
-        run: |
-          remove_all_actions
+  remove_all_old_actions:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: invalidunit/action/.github/workflows/remove_all_actions.yml@main
